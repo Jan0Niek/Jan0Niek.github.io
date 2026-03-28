@@ -1,0 +1,16 @@
+@import url(JetBrainsMono-VariableFont_wght.ttf);
+@import url(Nunito-VariableFont_wght.ttf);
+
+/* voor testings effe */
+body * {
+    border: 1px solid purple;
+}
+
+
+body {
+    margin: 0px;
+    /* padding: 0px; */
+
+    /* font-family: "JetBrains Mono", monospace; */
+    font-family: "Nunito", sans-serif;
+}
