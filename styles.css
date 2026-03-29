@@ -1,10 +1,11 @@
 @import url(fonts/JetBrainsMono-VariableFont_wght.ttf);
-@import url(fonts/Nunito-VariableFont_wght.ttf);
+@import url('fonts/Nunito-VariableFont_wght.ttf');
+
 
 /* should i set the margin and padding of everything to zero by default, or do i want the arbitrary defaults set by browsers? */
 body * {
     /* voor testings effe */
-    /* border: 1px solid purple; */
+    border: 1px solid purple;
 }
 
 
@@ -27,16 +28,9 @@ div.resizableWidthWrapper {
     width: 70%;
 }
 
-/* article.powerpointLikeGrid {
-    display: grid;
-
-    grid-template-columns: 99fr 1fr;
+#currentAge {
+    font-family: 'JetBrains Mono', sans-serif;
 }
-
-
-article.powerpointLikeGrid * {
-    grid-column: 1;
-} */
 
 .flexyTexty {
     display: flex;
@@ -45,20 +39,27 @@ article.powerpointLikeGrid * {
 
 
 article.hideableChildrenNotHeader {
-    cursor: help;
+    cursor: pointer;
+    border-bottom-width: 5px;
+    border-color: transparent;
+    /* transition: 1s; */
+    padding-bottom: 1px;
     border-bottom-style: double;
+    
 }
 article.hideableChildrenNotHeader:hover {
     border-color: aqua;
     /* transition: 1s; */
+    padding-bottom: 1px;
+    border-bottom-style: double;
 }
         /* don't overlook the star ⬇️ selector */
 article.hideableChildrenNotHeader * {
-    pointer-events: none;
+    pointer-events: inherit;
     cursor: inherit;
 }
 
-img.rightmost {
+.rightmost {
     max-width: 40%;
 }
 
