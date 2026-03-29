@@ -35,6 +35,7 @@ div.resizableWidthWrapper {
 .flexyTexty {
     display: flex;
     justify-content: center;
+    flex-flow: wrap-reverse;
 }
 
 
@@ -59,10 +60,33 @@ article.hideableChildrenNotHeader * {
     cursor: inherit;
 }
 
-.rightmost {
-    max-width: 40%;
+h1{
+    color: chartreuse;
 }
 
+/* alle max-widths moeten  bij een smaller scherm breder zijn zodat het het hele scherm vult */
+/* dat kan want al mijn flexbox overflows zijn hopelijk goed */
+.leftmost {
+    min-width: none;
+    max-width: 58%;
+    /* 2 percent extra in case of borders or margins or whatever */
+}
+.rightmost {
+    min-width: 40%;
+    max-width: 40%;
+    height: fit-content;
+   
+}
+.rightmost img {
+    width: 15%;
+    /* dit moet ook zich aanpassen aan schermgrootte, met at-rules of is er een coolere wijze?? */
+    height: fit-content;
+}
+.multiImage {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
 
 
 
