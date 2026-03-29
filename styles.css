@@ -1,9 +1,10 @@
-@import url(JetBrainsMono-VariableFont_wght.ttf);
-@import url(Nunito-VariableFont_wght.ttf);
+@import url(fonts/JetBrainsMono-VariableFont_wght.ttf);
+@import url(fonts/Nunito-VariableFont_wght.ttf);
 
-/* voor testings effe */
+/* should i set the margin and padding of everything to zero by default, or do i want the arbitrary defaults set by browsers? */
 body * {
-    border: 1px solid purple;
+    /* voor testings effe */
+    /* border: 1px solid purple; */
 }
 
 
@@ -13,4 +14,62 @@ body {
 
     /* font-family: "JetBrains Mono", monospace; */
     font-family: "Nunito", sans-serif;
+}
+
+div.centeredWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+div.resizableWidthWrapper {
+    padding: 10px; 
+    /* maybe different unit than px should be used */
+    width: 70%;
+}
+
+/* article.powerpointLikeGrid {
+    display: grid;
+
+    grid-template-columns: 99fr 1fr;
+}
+
+
+article.powerpointLikeGrid * {
+    grid-column: 1;
+} */
+
+.flexyTexty {
+    display: flex;
+    justify-content: center;
+}
+
+
+article.hideableChildrenNotHeader {
+    cursor: help;
+    border-bottom-style: double;
+}
+article.hideableChildrenNotHeader:hover {
+    border-color: aqua;
+    /* transition: 1s; */
+}
+        /* don't overlook the star ⬇️ selector */
+article.hideableChildrenNotHeader * {
+    pointer-events: none;
+    cursor: inherit;
+}
+
+img.rightmost {
+    max-width: 40%;
+}
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
 }

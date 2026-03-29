@@ -1,9 +1,9 @@
 const currentDate = new Date()
 const birthDate = new Date(2008, 2, 30)
 
-let myAgeInSeconds = currentDate.valueOf() - birthDate.valueOf()
-// let myAgeInYears = myAgeInSeconds/1000/60/60/24/365
-let ageInFullYears = new Date(myAgeInSeconds).getFullYear()-1970
+let myAgeInMiliSeconds = currentDate.valueOf() - birthDate.valueOf()
+// let myAgeInYears = myAgeInMiliSeconds/1000/60/60/24/365
+let ageInFullYears = new Date(myAgeInMiliSeconds).getFullYear()-1970
 
 let thatSpanWithMyAge = document.getElementById("currentAge")
 thatSpanWithMyAge.innerHTML = ageInFullYears
@@ -16,4 +16,30 @@ let dumbAgeThingAnimInterval = window.setInterval(() => {
 }, 20 + Math.random()*60)
 
 
+//it shows as flex not as block
+function hideShowArticle(/** @type {Element} */ article) {
+    console.log('clicked')
+    for (let child of article.children) {
+        if (child.tagName != 'H1'){
+            if (child.style.display == 'none'){
+                child.style.display = 'flex'
+            }else{
+                child.style.display = 'none'
+            }
+        }
+    }
+}
 
+let hidyArticles = document.getElementsByClassName("hideableChildrenNotHeader")
+for (let article of hidyArticles) {
+    article.addEventListener("click", function(){hideShowArticle(article)}) // i love js man
+
+
+    if (!article.classList.contains("startUnhidden")){
+        for (let child of article.children) {
+            if (child.tagName != 'H1'){
+                child.style.display = 'none'
+            }
+        }
+    }
+}
