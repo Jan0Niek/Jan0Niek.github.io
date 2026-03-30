@@ -5,7 +5,7 @@
 /* should i set the margin and padding of everything to zero by default, or do i want the arbitrary defaults set by browsers? */
 body * {
     /* voor testings effe */
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 }
 
 
@@ -35,7 +35,13 @@ div.resizableWidthWrapper {
 .flexyTexty {
     display: flex;
     justify-content: center;
+    
+}
+.flexWrapRev{
     flex-flow: wrap-reverse;
+}
+.flexNowrap {
+    flex-wrap: nowrap;
 }
 
 
