@@ -72,10 +72,14 @@ h1{
     /* 2 percent extra in case of borders or margins or whatever */
 }
 .rightmost {
+    margin: 0.5%;
     min-width: 40%;
     max-width: 40%;
     height: fit-content;
    
+}
+img.rightmost {
+    max-width: 11cm;
 }
 .rightmost img {
     width: 2cm;
