@@ -1,5 +1,5 @@
 const currentDate = new Date()
-const birthDate = new Date(2008, 2, 30)
+const birthDate = new Date(2008, 3, 17)
 
 let myAgeInMiliSeconds = currentDate.valueOf() - birthDate.valueOf()
 // let myAgeInYears = myAgeInMiliSeconds/1000/60/60/24/365

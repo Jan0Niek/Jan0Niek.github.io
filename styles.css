@@ -78,7 +78,7 @@ h1{
    
 }
 .rightmost img {
-    width: 15%;
+    width: 2cm;
     /* dit moet ook zich aanpassen aan schermgrootte, met at-rules of is er een coolere wijze?? */
     height: fit-content;
 }
